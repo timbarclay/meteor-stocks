@@ -1,1 +1,121 @@
-/* CSS declarations go here */
+body, h1, h2, h3, div, p {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  height: 5em;
+  line-height: 5em;
+  border-bottom: rgb(207, 214, 219) 1px solid;
+  padding: 0 2em;
+}
+
+header h1 {
+  display: inline;
+}
+
+header #login-buttons {
+  float: right;
+  margin-top: 2.5em;
+  font-size: 0.9em;
+}
+
+#login-dropdown-list {
+  left: -200px;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+}
+
+.main-panel {
+  flex: 1;
+}
+
+.sidebar {
+  flex: 0 0 19em;
+  background-color: rgb(236, 239, 242);
+  border-right: rgb(207, 214, 219) 1px solid;
+  overflow: hidden;
+}
+
+.sidebar form.add-stock {
+  height: 3em;
+  line-height: 3em;
+}
+
+.add-stock input {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  padding-left: 2em;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 2em;
+}
+
+.sidebar li {
+  height: 3em;
+  line-height: 3em;
+  vertical-align: middle;
+  padding-left: 2em;
+  cursor: default;
+}
+
+.sidebar li:hover {
+  background-color: rgb(216, 223, 237);
+}
+
+.numSelected {
+  color: rgb(172, 172, 173);
+  font-size: 0.7em;
+  font-style: italic;
+}
+
+.options {
+  display: none;
+}
+
+.sidebar li:hover .options {
+  display: inline;
+  float: right;
+  height: 100%;
+  overflow: hidden;
+  color: rgb(113, 114, 115);
+}
+
+.options span {
+  padding: 1em 0.5em;
+  margin: 0 -2px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.delete:hover {
+  background-color: rgb(226, 132, 132);
+}
+
+.favourite .toggle-favourite:before {
+  content: "★";
+  color: rgb(255, 248, 173);
+}
+
+.toggle-favourite:hover {
+  background-color: rgb(237, 231, 171);
+}
+
+.toggle-favourite:before {
+  content: "☆"
+}

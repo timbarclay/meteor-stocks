@@ -12,9 +12,7 @@ Template.body.events({
     event.preventDefault();
 
     var input = event.target.symbol;
-
     Meteor.call("addStock", input.value);
-
     input.value = "";
   }
 });

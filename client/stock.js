@@ -7,9 +7,8 @@ Template.stock.events({
     Meteor.call("removeStock", this._id);
   },
 
-  "click .listSymbol": function() {
-    debugger;
-    SelectedStock.set({name: this.symbol});
+  "click .stockListing": function() {
+    SelectedStock.set({symbol: this.symbol});
   }
 });
 

@@ -1,18 +1,20 @@
 <head>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
   <title>Stock Manager</title>
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <h1>Stock manager</h1>
-      {{> loginButtons}}
-    </header>
+  <header>
+    <h1>Meteor Stocks</h1>
+    {{> loginButtons}}
+  </header>
 
+  <div class="container">
     {{#if currentUser}}
       <div class="sidebar">
         <form class="add-stock">
-          <input type="text" name="symbol" placeholder="Type a symbol to add a stock" />
+          <input type="text" name="symbol" placeholder="Search for a symbol..." />
         </form>
 
         <ul>
@@ -20,6 +22,8 @@
             {{> stock}}
           {{/each}}
         </ul>
+
+
       </div>
 
       <div class="main-panel">
@@ -32,13 +36,16 @@
 </body>
 
 <template name="stock">
-  <li class="{{#if favourite}}favourite{{/if}}">
-    <span class="listSymbol">{{symbol}} ({{count}})</span>
-    <input type="checkbox" checked="{{favourite}}" class="toggle-favourite" />
-    <span class="delete">delete</span>
+  <li class="stockListing {{#if favourite}}favourite{{/if}}">
+    <span class="listSymbol">{{symbol}}</span>
+    <span class="numSelected">({{count}})</span>
+    <div class="options">
+      <span class="toggle-favourite" title="{{#if favourite}}Unfavourite{{else}}Make favourite{{/if}}"></span>
+      <span class="delete" title="Delete">x</span>
+    </div>
   </li>
 </template>
 
 <template name="stockDetail">
-  <h2>{{name}}</h2>
+  <h2>{{symbol}}</h2>
 </template>
