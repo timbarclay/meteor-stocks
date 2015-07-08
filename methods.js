@@ -10,18 +10,19 @@ Meteor.methods({
       return;
     }
 
-    if(Meteor.isClient){
+    /*if(Meteor.isClient){
       // Stub to simulate action happening immediately
       Stocks.insert({
           symbol: symbol,
           owner: Meteor.userId()
         });
-    } else if(Meteor.isServer){
+    } else */if(Meteor.isServer){
       // Actual call
       Meteor.call("symbolExists", symbol, function(error, result){
-        if(result){
+        if(result !== "N/A"){
           Stocks.insert({
             symbol: symbol,
+            name: result,
             owner: Meteor.userId()
           });
         }

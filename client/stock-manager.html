@@ -34,18 +34,3 @@
     {{/if}}
   </div>
 </body>
-
-<template name="stock">
-  <li class="stockListing {{#if favourite}}favourite{{/if}}">
-    <span class="listSymbol">{{symbol}}</span>
-    <span class="numSelected">({{count}})</span>
-    <div class="options">
-      <span class="toggle-favourite" title="{{#if favourite}}Unfavourite{{else}}Make favourite{{/if}}"></span>
-      <span class="delete" title="Delete">x</span>
-    </div>
-  </li>
-</template>
-
-<template name="stockDetail">
-  <h2>{{symbol}}</h2>
-</template>

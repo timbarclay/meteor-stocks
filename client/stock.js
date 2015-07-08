@@ -8,7 +8,13 @@ Template.stock.events({
   },
 
   "click .stockListing": function() {
-    SelectedStock.set({symbol: this.symbol});
+    var name = this.name;
+    Meteor.call("getData", this.symbol, function(error, result){
+      SelectedStock.set({
+        name: name,
+        data: result
+      });
+    });
   }
 });
 

@@ -4,6 +4,18 @@ Meteor.methods({
         symbols: [symbol],
         fields: ['n']
       });
-      return data[symbol].name !== "N/A";
+      return data[symbol].name;
+  },
+
+  getData: function(symbol){
+    var end = new Date();
+    var start = new Date(end);
+    start.setDate(start.getDate() - 30);
+
+    return YahooFinance.historical({
+      symbol: symbol,
+      from: start,
+      to: end
+    });
   }
 });
