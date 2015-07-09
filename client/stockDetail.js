@@ -47,16 +47,16 @@ function createChart() {
     },
     series: series
   });
-}
+};
 
 Template.stockDetail.rendered = function() {
   Tracker.autorun(function () {
     createChart();
   });
-}
+};
 
 Template.stockDetail.events({
   "click .chart-toggle": function() {
     Session.set(this.symbol, !Session.get(this.symbol));
   }
-})
+});
