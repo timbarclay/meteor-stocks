@@ -23,6 +23,16 @@
           {{/each}}
         </ul>
 
+        {{#if hasStocks}}
+          <div class="fav-filter">
+            Filter favourites
+          </div>
+        {{else}}
+          <div class="no-stocks">
+            To get started, add a stock by typing its symbol (e.g. aapl, goog etc)
+            in the search box above
+          </div>
+        {{/if}}
 
       </div>
 
@@ -30,6 +40,10 @@
         {{#with selectedStock}}
           {{> stockDetail}}
         {{/with}}
+      </div>
+    {{else}}
+      <div class="no-login">
+        Sign up or log in to get started
       </div>
     {{/if}}
   </div>

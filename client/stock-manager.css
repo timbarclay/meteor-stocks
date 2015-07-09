@@ -119,3 +119,49 @@ header #login-buttons {
 .toggle-favourite:before {
   content: "☆"
 }
+
+.no-stocks,
+.fav-filter {
+  padding: 2em;
+  font-size: 0.8em;
+  color: rgb(148, 161, 173);
+  text-align: center;
+  text-shadow: 1px 1px white;
+}
+
+.fav-filter {
+  cursor: pointer;
+}
+
+.fav-filter {
+  text-decoration: underline;
+}
+
+.fav-filter:hover {
+  color: rgb(71, 71, 71);
+}
+
+.main-panel {
+  padding: 2em;
+}
+
+.detail-symbol,
+.current-price,
+.chart-toggle {
+  color: rgb(113, 114, 115);
+}
+
+.current-price {
+  font-size: 1.2em;
+  margin-bottom: 2em;
+  display: inline-block;
+}
+
+.chart-toggle {
+  margin-top: 1em;
+}
+
+#container-area {
+  min-width: 310px;
+  height: 650px;
+}

@@ -1,5 +1,5 @@
 Meteor.methods({
-  symbolExists: function(symbol){
+  getName: function(symbol){
       var data = YahooFinance.snapshot({
         symbols: [symbol],
         fields: ['n']
@@ -10,7 +10,7 @@ Meteor.methods({
   getData: function(symbol){
     var end = new Date();
     var start = new Date(end);
-    start.setDate(start.getDate() - 30);
+    start.setDate(start.getDate() - 365);
 
     return YahooFinance.historical({
       symbol: symbol,

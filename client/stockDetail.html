@@ -1,5 +1,10 @@
 <template name="stockDetail">
-  <h2>{{name}}</h2>
+  <h2>{{name}} <span class="detail-symbol">({{symbol}})</span></h2>
+  <div class="current-price">{{price}}</div>
 
-  <div id="container-area" style="min-width: 310px; height: 400px;"></div>
+  <div id="container-area"></div>
+  
+  <button class="chart-toggle">
+    Toggle chart type
+  </button>
 </template>

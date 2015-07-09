@@ -9,11 +9,17 @@ Template.stock.events({
 
   "click .stockListing": function() {
     var name = this.name;
+    var symbol = this.symbol;
     Meteor.call("getData", this.symbol, function(error, result){
-      SelectedStock.set({
-        name: name,
-        data: result
-      });
+      if(result){
+        var currentPrice = result[result.length-1].close.toFixed(2);
+        SelectedStock.set({
+          name: name,
+          symbol: symbol,
+          data: result,
+          price: currentPrice
+        });
+      }
     });
   }
 });
