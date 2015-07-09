@@ -36,7 +36,8 @@ header #login-buttons {
   flex: 1;
 }
 
-.main-panel {
+.main-panel,
+.no-login {
   flex: 1;
 }
 
@@ -121,7 +122,8 @@ header #login-buttons {
 }
 
 .no-stocks,
-.fav-filter {
+.fav-filter,
+.no-login {
   padding: 2em;
   font-size: 0.8em;
   color: rgb(148, 161, 173);
