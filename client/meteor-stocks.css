@@ -5,8 +5,12 @@ body, h1, h2, h3, div, p {
 
 body {
   display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   min-height: 100vh;
   flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -33,16 +37,23 @@ header #login-buttons {
 
 .container {
   display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   flex: 1;
+  -ms-flex: 1 0 auto;
 }
 
 .main-panel,
 .no-login {
   flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1 0 auto;
 }
 
 .sidebar {
   flex: 0 0 19em;
+  -webkit-flex: 0 0 19em;
+  -ms-flex: 0 0 19em;
   background-color: rgb(236, 239, 242);
   border-right: rgb(207, 214, 219) 1px solid;
   overflow: hidden;
@@ -165,5 +176,5 @@ header #login-buttons {
 
 #container-area {
   min-width: 310px;
-  height: 650px;
+  height: 600px;
 }
